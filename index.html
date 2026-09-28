@@ -31,31 +31,30 @@ index.html
     </iframe>
   </div>
 </section>
-      frameborder="0"
-      marginheight="0"
-      marginwidth="0">
-      Loading…
-    </iframe>
-  </div>
-</section>
-  <div class="icon">🛍️</div>
-  <h3>5 Listings — $20</h3>
-  <p>Titles, descriptions, organization, and buyer-friendly wording.</p>
- <button class="btn primary" onclick="showQuote()">Get Started</button>
-</div><div class="tool"><div class="icon">📲</div><h3>Lead Messages — $25+</h3><p>A ready-to-use set of replies, follow-ups, and customer messages.</p></div><div class="tool"><div class="icon">📄</div><h3>Resume Package — $15+</h3><p>Resume polishing and a tailored cover letter.</p></div><div class="tool"><div class="icon">⚡</div><h3>Custom Work</h3><p>Have something else? Send the details and get a simple quote.</p></div></div></section>
-<footer class="footer">QuickFix AI • A simple prototype for faster everyday work</footer>
+ <h3>5 Marketplace Listings — $20</h3>
+<p>Titles, descriptions, organization, and buyer-friendly wording.</p>
 </div>
-<script>
-let current='listing';
-const configs={listing:{title:'Marketplace Listing',placeholder:'Example: PS5, good condition, includes controller, $350, pickup in Ogden.',out:t=>{let s=t.trim();return 'TITLE: '+(s.split(/[,\.]/)[0]||'Item for Sale')+'\n\nDESCRIPTION:\n'+s+'\n\n• Clean, easy-to-read details\n• Price and condition clearly stated\n• Buyer-friendly wording\n• Ready to post on Marketplace'}},resume:{title:'Resume Improver',placeholder:'Paste a job experience or resume section here...',out:t=>'POLISHED VERSION:\n\n'+t.trim().replace(/\bworked\b/gi,'supported').replace(/\bhelped\b/gi,'assisted')+'\n\nTip: Add measurable results, tools used, and specific responsibilities where possible.'},message:{title:'Customer Message',placeholder:'Example: Customer asked if the item is still available and when they can pick it up.',out:t=>'PROFESSIONAL REPLY:\n\nThanks for reaching out! Yes, it’s still available. I’d be happy to help. What time works best for you to pick it up?\n\nCUSTOMIZED FROM:\n'+t.trim()},email:{title:'Email Generator',placeholder:'Example: Need to ask my manager for Friday off because of an appointment.',out:t=>'SUBJECT: Quick Request\n\nHi,\n\nI wanted to reach out regarding '+t.trim()+'. Please let me know if that works for you. I appreciate your help.\n\nThanks,'}};
-function setTool(x){current=x;document.getElementById('toolTitle').textContent=configs[x].title;document.getElementById('input').placeholder=configs[x].placeholder;document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('active',c.dataset.tool===x));document.querySelector('#workspace').scrollIntoView({behavior:'smooth',block:'start'})}
-function generate(){let t=document.getElementById('input').value;if(!t.trim()){document.getElementById('result').textContent='Paste some rough text first, then tap Generate ✨';return}document.getElementById('result').textContent=configs[current].out(t)}
-function contact(){
-  window.open('https://forms.gle/VyebVJUdXDeQpzBV8','_blank');
-}function showQuote(){
-  const quote = document.querySelector('#quote');
-  quote.style.display = 'block';
-  quote.scrollIntoView({behavior:'smooth', block:'start'});
-}
-</script>
-</body></html>
+
+<div class="tool">
+  <div class="icon">📲</div>
+  <h3>Lead Messages — Starting at $25</h3>
+  <p>Ready-to-use replies, follow-ups, and customer messages.</p>
+</div>
+
+<div class="tool">
+  <div class="icon">📄</div>
+  <h3>Resume Package — Starting at $15</h3>
+  <p>Resume polishing and a tailored cover letter.</p>
+</div>
+
+<div class="tool">
+  <div class="icon">⚡</div>
+  <h3>Custom Work — Get a Quote</h3>
+  <p>Have something else? Tell us what you need and we'll provide a quote.</p>
+</div>
+</div>
+
+<div style="text-align:center;margin-top:28px;">
+  <button class="btn primary" onclick="showQuote()">Get Started</button>
+</div>
+</section>
