@@ -15,11 +15,26 @@ index.html
 <section class="hero"><div><div class="eyebrow">⚡ Free AI tools • No signup</div><h1>Get it done.<br><span>Faster.</span></h1><p class="lead">QuickFix AI turns rough ideas, listings, resumes, and customer messages into polished work in seconds.</p><div class="buttons"><button class="btn primary" onclick="document.querySelector('#tools').scrollIntoView({behavior:'smooth'})">Try a free tool</button><button class="btn secondary" onclick="document.querySelector('#services').scrollIntoView({behavior:'smooth'})">See services</button></div></div><div class="card"><div class="mock-head"><strong>QuickFix result</strong><span class="label"><i class="dot"></i>Ready</span></div><div class="mockbox"><strong>Before</strong><p>“Selling ps5. works good. comes with controller. $350.”</p></div><div class="mockbox"><strong>After</strong><p>“PS5 Console + Controller — Great Condition 🎮<br>Clean, fully working PS5 ready to play. Includes controller. $350.”</p></div></div></section>
 <section class="section" id="tools"><h2>Free tools</h2><p class="sub">Pick a tool, paste your rough text, and get a polished starting point.</p><div class="tools"><div class="tool" onclick="setTool('listing')"><div class="icon">🛒</div><h3>Listing Generator</h3><p>Turn rough item details into a clean Marketplace listing.</p></div><div class="tool" onclick="setTool('resume')"><div class="icon">📄</div><h3>Resume Improver</h3><p>Make your experience clearer and more professional.</p></div><div class="tool" onclick="setTool('message')"><div class="icon">💬</div><h3>Message Generator</h3><p>Create friendly customer replies and follow-ups.</p></div><div class="tool" onclick="setTool('email')"><div class="icon">✉️</div><h3>Email Generator</h3><p>Turn rough notes into a polished email.</p></div></div></section>
 <section class="section" id="workspace"><h2>Try it now</h2><p class="sub">This demo runs locally in your browser—no account required.</p><div class="workspace"><div class="panel"><h3 id="toolTitle">Marketplace Listing</h3><div class="selects"><button class="chip active" data-tool="listing" onclick="setTool('listing')">Listing</button><button class="chip" data-tool="resume" onclick="setTool('resume')">Resume</button><button class="chip" data-tool="message" onclick="setTool('message')">Message</button><button class="chip" data-tool="email" onclick="setTool('email')">Email</button></div><textarea id="input" placeholder="Paste your rough text here..."></textarea><div class="buttons"><button class="btn primary" onclick="generate()">Generate ✨</button><button class="btn secondary" onclick="document.querySelector('#input').value=''">Clear</button></div></div><div class="panel"><h3>Your polished result</h3><div class="result" id="result">Your generated result will appear here.</div><div class="price"><div><strong>Need us to do it for you?</strong><div class="label">Professional done-for-you service</div></div><button class="btn primary" onclick="contact()">Get a quote</button></div></div></div></section>
-<section class="section" id="services"><h2>Done-for-you services</h2><p class="sub">For people who want the finished result instead of doing it themselves.</p><div class="tools"><div class="tool">
+<section class="section" id="quote">
+  <h2>Get Started</h2>
+  <p class="sub">Tell us what you need and we'll get back to you with the next steps.</p>
+
+  <div class="panel" style="overflow:hidden;">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdIufMJHXfTHe_l3taTiS1xodQUZ-qlpapL4s1isqajQgFtcw/viewform?embedded=true"
+      width="100%"
+      height="1037"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0">
+      Loading…
+    </iframe>
+  </div>
+</section>
   <div class="icon">🛍️</div>
   <h3>5 Listings — $20</h3>
   <p>Titles, descriptions, organization, and buyer-friendly wording.</p>
-  <button class="btn primary" onclick="window.open('https://cash.app/$LoganErickson30','_blank')">Get 5 Listings — $20</button>
+ <button class="btn primary" onclick="document.querySelector('#quote').scrollIntoView({behavior:'smooth'})">Get Started</button>
 </div><div class="tool"><div class="icon">📲</div><h3>Lead Messages — $25+</h3><p>A ready-to-use set of replies, follow-ups, and customer messages.</p></div><div class="tool"><div class="icon">📄</div><h3>Resume Package — $15+</h3><p>Resume polishing and a tailored cover letter.</p></div><div class="tool"><div class="icon">⚡</div><h3>Custom Work</h3><p>Have something else? Send the details and get a simple quote.</p></div></div></section>
 <footer class="footer">QuickFix AI • A simple prototype for faster everyday work</footer>
 </div>
